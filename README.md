@@ -25,7 +25,8 @@ A JavaScript Development Environment
   - https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.uf9cw561d
   - Grunt, Gulp, npm Scripts
   
-6- Transpiling
+6- Transpiling -> Babel
+  - https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
   - Babel, Typescript, Elm
   
 7- Bundling
