@@ -1,14 +1,21 @@
 # dev-env-boilerplate
 A JavaScript Development Environment
 
-1- Editors and Configuration 
+1- Editors and Configuration -> Visual Studio Code 
+http://editorconfig.org/
   - Atom, Webstorm, Brackets, Visual Studio Code
   
-2- Package Management
-  - Bower, npm, JSPM, Jam, volo
+2- Package Management -> NPM
+https://npms.io/
+  - Bower, npm, jspm, Jam, Volo
+  
+  2.1- Package Security (scan at npm start) -
+  https://softwaresecured.com/13-tools-for-checking-the-security-risk-of-open-source-dependencies/ 
+    - retire.js
+    - Node Security Platform
   
 3- Development Servers I
-  - http-server, live-server, Express, budo, Webpack dev-server, BrowserSync
+  - http-server, live-server, Express (Koa or Hapi), budo, Webpack dev-server, BrowserSync
   
 4- Development Servers II
   - localtunner, ngrok, Surge, now
