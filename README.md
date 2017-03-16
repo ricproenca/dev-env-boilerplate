@@ -10,9 +10,9 @@ A JavaScript Development Environment
   - Bower, npm, jspm, Jam, Volo
   
   2.1- Package Security (scan at npm start) - ???
-    - https://softwaresecured.com/13-tools-for-checking-the-security-risk-of-open-source-dependencies/ 
-    - retire.js
-    - Node Security Platform
+  - https://softwaresecured.com/13-tools-for-checking-the-security-risk-of-open-source-dependencies/ 
+  - retire.js
+  - Node Security Platform
   
 3- Development Servers I
   - http-server, live-server, Express (Koa or Hapi), budo, Webpack dev-server, BrowserSync
