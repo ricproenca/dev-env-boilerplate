@@ -21,11 +21,12 @@ A JavaScript Development Environment
 4- Development Servers - Sharing work-in-progress
   - localtunner, ngrok, Surge, now
   
-5- Automation
+5- Automation -> npm Scripts
+  - https://medium.freecodecamp.com/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.uf9cw561d
   - Grunt, Gulp, npm Scripts
   
 6- Transpiling
-  - Bable, Typescript, Elm
+  - Babel, Typescript, Elm
   
 7- Bundling
   - Browserify, Webpack, Rollup, JSPM
