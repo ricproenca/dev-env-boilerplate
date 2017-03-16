@@ -14,11 +14,11 @@ A JavaScript Development Environment
   - retire.js
   - Node Security Platform
   
-3- Development Servers I -> Express
+3- Development Servers -> Express
   - https://expressjs.com/
   - http-server, live-server, Express (Koa or Hapi), budo, Webpack dev-server, BrowserSync
   
-4- Development Servers II
+4- Development Servers - Sharing work-in-progress
   - localtunner, ngrok, Surge, now
   
 5- Automation
