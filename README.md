@@ -29,7 +29,7 @@ A JavaScript Development Environment
   - https://github.com/jashkenas/coffeescript/wiki/List-of-languages-that-compile-to-JS
   - Babel, Typescript, Elm
   
-7- Bundling
+7- Bundling -> Webpack
   - Browserify, Webpack, Rollup, JSPM
   
 8- Linting
