@@ -9,10 +9,10 @@ A JavaScript Development Environment
   - https://npms.io/
   - Bower, npm, jspm, Jam, Volo
   
-  2.1- Package Security (scan at npm start) - ???
-  - https://softwaresecured.com/13-tools-for-checking-the-security-risk-of-open-source-dependencies/ 
-  - retire.js
-  - Node Security Platform
+  1. Package Security (scan at npm start) - Node Security Platform
+     - https://softwaresecured.com/13-tools-for-checking-the-security-risk-of-open-source-dependencies/ 
+     - retire.js
+     - Node Security Platform
   
 3- Development Servers -> Express
   - https://expressjs.com/
@@ -36,21 +36,33 @@ A JavaScript Development Environment
   - https://github.com/dustinspecker/awesome-eslint
   - JSlint, JSHint, ESLint
   
-9- Testing and Continuous Integration (Framework, Assertion Library, Helper Libraries, Run tests, Place tests, When to Run tests)
-  - Mocha, Jasmine, Tape, QUnit, AVA, Jest
+9- Testing (Unit, Integration, UI) -> Mocha (only Unit tests)   
+  1. Testing Framework (Mocha, Jasmine, Tape, QUnit, AVA, Jest) -> Mocha
+  2. Assertion Library (Chai, should.js, expect) -> Chai
+  3. Helper Libraries (JSDOM + Cheerio)
+  4. Run tests (Browser, Headless browser, In-memory DOM) -> JSDOM
+     - Browser: Karma, Testem
+     - Headless Browser: PhantomJS
+     - In-memory DOM: JSDOM
+  5. Place tests (Centralized, Alongside) -> Alongside (filename.spec.js, fileName.test.js)
+  6. When to Run tests (Unit, Integration)
+     - Unit Tests: run upon save
+     - Integration Tests: run on demand or QA
+
+10- Continuous Integration
   - Travis, Appveyor, Jenkins, circleci, semaphore, SnapCI
-  
-10- HTTP (Node & Browser) 
+
+11- HTTP (Node & Browser) 
   - http request
   - XMLHttpRequest, jQuery, Fetch
   - isomorphic-fetch, xhr, SuperAgent, Axios
   
-11- Project Structure
+12- Project Structure
 
-12- Production Build (hard code, via node, html-webpack-plugin)
+13- Production Build (hard code, via node, html-webpack-plugin)
 
-13- Automated Deployment (npm run start, npm run build, npm run deploy)
+14- Automated Deployment (npm run start, npm run build, npm run deploy)
   - AWS, Azure, Heroku, Firebase, Google Cloud, Pubstorm, Github, Surge
  
-14- Update Approaches
+15- Update Approaches
   - Yeoman, Github, npm
