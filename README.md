@@ -32,7 +32,8 @@ A JavaScript Development Environment
 7- Bundling -> Webpack
   - Browserify, Webpack, Rollup, JSPM
   
-8- Linting
+8- Linting -> ESLint
+  - https://github.com/dustinspecker/awesome-eslint
   - JSlint, JSHint, ESLint
   
 9- Testing and Continuous Integration (Framework, Assertion Library, Helper Libraries, Run tests, Place tests, When to Run tests)
