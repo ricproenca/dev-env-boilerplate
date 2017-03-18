@@ -49,7 +49,7 @@ A JavaScript Development Environment
      - Unit Tests: run upon save
      - Integration Tests: run on demand or QA
 
-10- Continuous Integration
+10- Continuous Integration -> Travis(linux) + Appveyor(Windows)
   - Travis, Appveyor, Jenkins, circleci, semaphore, SnapCI
 
 11- HTTP (Node & Browser) 
