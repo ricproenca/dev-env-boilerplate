@@ -85,7 +85,10 @@ A JavaScript Development Environment
 14- Automated Deployment ->  Heroku (API), Surge(UI)
   - AWS
   - Azure
-  - Heroku 
+  - Heroku
+     - ```heroku create```
+     - ```heroku git:remote -a shrouded-bayou-86110```
+     - ```git push heroku master```
   - Firebase
   - Google Cloud
   - Pubstorm
@@ -93,6 +96,30 @@ A JavaScript Development Environment
   - Surge
  
 15- Update Approaches
+  - https://github.com/facebookincubator/create-react-app
   - Yeoman
   - Github
   - npm
+
+16- Inspirational Resources
+  - http://http://andrewhfarmer.com/starter-project/
+  - http://github.com/gianarb/awesome-angularjs
+  - search for 'favourite library' + 
+     - development environment
+     - boilerplate
+     - starter kit
+     - starter project
+     - seed
+
+17- Challenge
+  - would we benefit from a starter kit?
+  - what are our JS pain points?
+  - would we benefit from a demo app?
+
+18 - App URLS
+1. heroku create
+2. heroku git:remote -a shrouded-bayou-86110
+3. git push heroku master
+
+- https://shrouded-bayou-86110.herokuapp.com/
+- https://git.heroku.com/shrouded-bayou-86110.git
