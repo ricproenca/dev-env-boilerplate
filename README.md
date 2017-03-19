@@ -52,11 +52,21 @@ A JavaScript Development Environment
 10- Continuous Integration -> Travis(linux) + Appveyor(Windows)
   - Travis, Appveyor, Jenkins, circleci, semaphore, SnapCI
 
-11- HTTP (Node & Browser) 
-  - http request
-  - XMLHttpRequest, jQuery, Fetch
-  - isomorphic-fetch, xhr, SuperAgent, Axios
-  
+11- HTTP Calls -> Axios (but i'm using fetch)
+  - http://github.com/github/fetch && http://github.com/matthew-andrews/isomorphic-fetch
+  - Node: request, http
+  - Browser: Fetch, XMLHttpRequest, jQuery, Framework-based
+  - Node & Browser: Axios, SuperAgent, isomorphic-fetch, xhr
+  1. Ways of Mocking HTTP
+     - Nock
+     - static JSON
+     - dev webserver (api-mock, JSON server, JSON Schema faker)
+     - BrowserSync, Express, ...
+  2. Mocking HTTP
+     - Declaring schema: JSON Schema Faker
+     - Generate random data: randexp.js, faker.js, chance.js
+     - Serve data via API: JSON server
+
 12- Project Structure
 
 13- Production Build (hard code, via node, html-webpack-plugin)
