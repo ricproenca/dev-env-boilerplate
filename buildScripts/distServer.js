@@ -11,6 +11,7 @@ const app = express();
 app.use(compression());
 app.use(express.static('dist'));
 
+/* Now is hosted on HEROKU
 app.get('/users', function(req, res) {
   res.json([
     {"id": 1, "firstName": "Ricardo", "lastName": "Proença", "email": "rp@gmail.com"},
@@ -18,6 +19,7 @@ app.get('/users', function(req, res) {
     {"id": 3, "firstName": "Pedro", "lastName": "Proença", "email": "pp@gmail.com"},
   ]);
 });
+*/
 
 app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname, '../dist/index.html'));

@@ -82,8 +82,17 @@ A JavaScript Development Environment
   - Error logging (TrackJS, Sentry, Nre Relic, Raygun)
   - HTML templates (embeddedJS)
   
-14- Automated Deployment (npm run start, npm run build, npm run deploy)
-  - AWS, Azure, Heroku, Firebase, Google Cloud, Pubstorm, Github, Surge
+14- Automated Deployment ->  Heroku (API), Surge(UI)
+  - AWS
+  - Azure
+  - Heroku 
+  - Firebase
+  - Google Cloud
+  - Pubstorm
+  - Github
+  - Surge
  
 15- Update Approaches
-  - Yeoman, Github, npm
+  - Yeoman
+  - Github
+  - npm
