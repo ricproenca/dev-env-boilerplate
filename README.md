@@ -68,7 +68,10 @@ A JavaScript Development Environment
      - Serve data via API: JSON server
 
 12- Project Structure
-
+  - https://github.com/coryhouse/react-slingshot for POJOs use
+  - demo app (important to show good examples)
+  - tips (put all js in a js file, organize by feature, extract logic to POJOs)
+  
 13- Production Build (hard code, via node, html-webpack-plugin)
 
 14- Automated Deployment (npm run start, npm run build, npm run deploy)
