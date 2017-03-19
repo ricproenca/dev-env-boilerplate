@@ -72,8 +72,16 @@ A JavaScript Development Environment
   - demo app (important to show good examples)
   - tips (put all js in a js file, organize by feature, extract logic to POJOs)
   
-13- Production Build (hard code, via node, html-webpack-plugin)
-
+13- Production Build -> html-webpack-plugin, via node, hard code
+  - Minification && sourcemaps
+  - Dist Server
+  - Build npm scripts
+  - HTML generation
+  - Bundle splitting
+  - Cache busting
+  - Error logging (TrackJS, Sentry, Nre Relic, Raygun)
+  - HTML templates (embeddedJS)
+  
 14- Automated Deployment (npm run start, npm run build, npm run deploy)
   - AWS, Azure, Heroku, Firebase, Google Cloud, Pubstorm, Github, Surge
  

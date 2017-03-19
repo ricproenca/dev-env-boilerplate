@@ -1,4 +1,5 @@
- import path from 'path';
+import path from 'path';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   debug: true,                  // enables debug information
@@ -13,7 +14,9 @@ export default {
     publicPath: '/',
     filename: 'bundle.js'
   },
-  plugins: [],                  // enhance webpack power (hot-reloading, linting styles, ...)
+  plugins: [ // enhance webpack power (hot-reloading, linting styles, ...)
+    new HtmlWebpackPlugin({ template: 'src/index.html', inject: true }) // dynamic html with reference to bundle
+  ],
   module: {
     loaders: [                  // filetypes that we want to handle (SASS, images, JSON, ...)
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
