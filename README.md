@@ -117,9 +117,5 @@ A JavaScript Development Environment
   - would we benefit from a demo app?
 
 18 - App URLS
-1. heroku create
-2. heroku git:remote -a shrouded-bayou-86110
-3. git push heroku master
-
-- https://shrouded-bayou-86110.herokuapp.com/
-- https://git.heroku.com/shrouded-bayou-86110.git
+  - https://shrouded-bayou-86110.herokuapp.com/
+  - https://git.heroku.com/shrouded-bayou-86110.git
