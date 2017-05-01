@@ -1,10 +1,3 @@
-var ReactDOM = require('react-dom');
-var React = require('react');
-import AppComponent from './AppComponent';
-
-ReactDOM.render( <AppComponent /> , document.getElementById('app'));
-
-/*
 import { getUsers, deleteUser } from './api/userApi';
 
 getUsers().then(result => {
@@ -34,4 +27,4 @@ getUsers().then(result => {
             row.parentNode.removeChild(row);
         }
     });
-});*/
+});
