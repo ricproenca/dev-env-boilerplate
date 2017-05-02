@@ -1,29 +1,36 @@
-import { getUsers, deleteUser } from './api/userApi';
+import moment from 'moment';
+import $ from 'jquery';
 
-getUsers().then(result => {
-  let usersBody = '';
+import styles from './assets/css/styles.css'; /* eslint no-unused-vars: 0 */
+import clockStyle from './assets/css/clock.css'; /* eslint no-unused-vars: 0 */
 
-  result.forEach(user => {
-    usersBody += `<tr>
-    <td><a href="#" data-id="${user.id}" class="deleteUser">Delete</a></td>
-    <td>${user.id}</td>
-    <td>${user.firstName}</td>
-    <td>${user.lastName}</td>
-    <td>${user.email}</td>
-    </tr>`;
+import clockComponent from './js/clockComponent';
+import loginComponent from './js/loginComponent';
+
+const clockElement = clockComponent();
+const loginElement = loginComponent();
+
+$('body').append(loginElement);
+$('body').append(clockElement);
+
+function update(el) {
+  el.html(moment().format('D. MMMM YYYY H:mm:ss'));
+}
+
+update(clockElement);
+const runClock = setInterval(update.bind(this,clockElement), 1000);
+
+setTimeout( () => {
+
+  import('./assets/css/clock.lazy.css').catch((err) => {
+    console.error(err);
   });
 
-  document.getElementById('users').innerHTML = usersBody;
-
-  const deleteLinks = document.getElementsByClassName('deleteUser');
-
-  Array.from(deleteLinks, link => {
-    link.onclick = function(event) {
-      const element = event.target;
-      event.preventDefault;
-      deleteUser(element.attributes['data-id'].value);
-      const row = element.parentNode.parentNode;
-      row.parentNode.removeChild(row);
-    };
+  import('./js/clockComponent.lazy').then((lazyClock) => {
+    clearTimeout(runClock);
+    lazyClock(clockElement);
+  }).catch((err) => {
+    console.error(err);
   });
-});
+
+}, 10000);
