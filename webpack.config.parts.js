@@ -34,3 +34,16 @@ exports.loadImages = ({ include, exclude, options } = {}) => ({
     options
   }
 });
+
+// Supports Multiple Formats using file-loader, not url-loader
+// It's a trade-off as you get extra requests, but perhaps it's the right move.
+exports.loadFonts = ({ include, exclude, options } = {}) => ({
+  // Capture eot, ttf, woff, and woff2
+  test: /\.(eot|ttf|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+  include,
+  exclude,
+  use: {
+    loader: 'file-loader',
+    options
+  }
+});
