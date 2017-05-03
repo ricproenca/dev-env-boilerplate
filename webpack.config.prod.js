@@ -36,7 +36,10 @@ const prodConfig = merge([
       new BabiliPlugin(),
 
       // CSS EXTRACT plugin:
-      new ExtractTextPlugin('./css/[name].[contenthash:8].css'),
+      new ExtractTextPlugin({
+        filename: './css/[name].[contenthash:8].css',
+        publicPath: '../'
+      }),
 
       // Remove unused selectors from your CSS.
       // You should use it with the extract-text-webpack-plugin.
@@ -75,7 +78,10 @@ const prodConfig = merge([
           test: /\.(png|jpg|svg|gif)$/,
           use: {
             loader: 'file-loader',
-            options: { name: './images/[name].[hash:8].[ext]' }
+            options: {
+              name: './images/[name].[hash:8].[ext]',
+              publicPath: '/'
+            }
           }
         }
       ]

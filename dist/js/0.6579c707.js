@@ -1,2 +1,0 @@
-webpackJsonp([0],{"W/2i":function(a){"use strict";var d=10,e=function(g){g.html(d++ +" seconds already passed...")};a.exports=function(f){e(f),setInterval(e.bind(void 0,f),1e3)}}});
-//# sourceMappingURL=0.6579c707.js.map
