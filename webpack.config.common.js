@@ -56,9 +56,9 @@ const commonConfig = merge([
         // Connecting Babel with webpack through babel-loader
         {
           test: /\.js$/,
-          loader: 'babel-loader',
+          include: parts.paths.src,
           use: {
-            include: parts.paths.src,
+            loader: 'babel-loader',
             options: {
               cacheDirectory: true // Enable caching for improved performance during development.
             }

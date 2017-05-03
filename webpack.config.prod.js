@@ -10,15 +10,6 @@ import BabiliPlugin from 'babili-webpack-plugin';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import PurifyCSSPlugin from 'purifycss-webpack';
 
-const extractCSS = new ExtractTextPlugin({
-  filename: './css/[name].[contenthash:8].css',
-  publicPath: '../'
-});
-
-const purifyCSS = new PurifyCSSPlugin({
-  paths: glob.sync(`${parts.paths.src}/**/*.js`, { nodir: true })
-});
-
 const prodConfig = merge([
   {
     devtool: 'source-map',
@@ -45,7 +36,13 @@ const prodConfig = merge([
       new BabiliPlugin(),
 
       // CSS EXTRACT plugin:
-      extractCSS
+      new ExtractTextPlugin('./css/[name].[contenthash:8].css'),
+
+      // Remove unused selectors from your CSS.
+      // You should use it with the extract-text-webpack-plugin.
+      new PurifyCSSPlugin({
+        paths: glob.sync(`${parts.paths.src}/**/*.js`, { nodir: true })
+      })
     ],
     module: {
       loaders: [
@@ -55,7 +52,7 @@ const prodConfig = merge([
         // The plugin then picks up the result aggregated by the loader and emits a separate file.
         {
           test: /\.css$/,
-          use: extractCSS.extract({
+          use: ExtractTextPlugin.extract({
             use: [
               'css-loader',
               {
@@ -71,10 +68,7 @@ const prodConfig = merge([
           })
         },
 
-        // Remove unused selectors from your CSS.
-        // You should use it with the extract-text-webpack-plugin.
-        { plugins: [purifyCSS] },
-
+        // IMAGES EXTRACT
         // Stores separate images to files.
         // Perfect for production.
         {
