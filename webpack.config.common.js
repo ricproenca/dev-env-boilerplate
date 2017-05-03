@@ -4,7 +4,7 @@ const parts = require('./webpack.parts');
 
 const bootstrapEntryPoints = require('./webpack.bootstrap');
 
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const commonConfig = merge([
@@ -57,9 +57,11 @@ const commonConfig = merge([
         {
           test: /\.js$/,
           loader: 'babel-loader',
-          include: parts.paths.src,
-          options: {
-            cacheDirectory: true // Enable caching for improved performance during development.
+          use: {
+            include: parts.paths.src,
+            options: {
+              cacheDirectory: true // Enable caching for improved performance during development.
+            }
           }
         },
         // FONTS LOADER
@@ -70,8 +72,7 @@ const commonConfig = merge([
           use: {
             loader: 'file-loader',
             options: {
-              name: './fonts/[name].[hash:8].[ext]',
-              publicPath: '/' // override the default per loader definition
+              name: './fonts/[name].[hash:8].[ext]'
             }
           }
         }
