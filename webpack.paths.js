@@ -1,8 +1,7 @@
-const path = require('path');
+import path from 'path';
 
 // Set paths for source and build folder
-const PATHS = {
+export default {
   src: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist')
 };
-exports.paths = PATHS;

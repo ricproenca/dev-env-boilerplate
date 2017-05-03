@@ -1,6 +1,6 @@
 import webpack from 'webpack';
 import merge from 'webpack-merge';
-import parts from './webpack.parts';
+import paths from './webpack.paths';
 import glob from 'glob';
 
 import commonConfig from './webpack.config.common';
@@ -44,7 +44,7 @@ const prodConfig = merge([
       // Remove unused selectors from your CSS.
       // You should use it with the extract-text-webpack-plugin.
       new PurifyCSSPlugin({
-        paths: glob.sync(`${parts.paths.src}/**/*.js`, { nodir: true })
+        paths: glob.sync(`${paths.src}/**/*.js`, { nodir: true })
       })
     ],
     module: {

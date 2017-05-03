@@ -7,7 +7,6 @@ describe('clockComponent.js', () => {
 
   const dom = new JSDOM('');
   global.window = dom.window;
-  const $ = require('jquery');
   const clockComponent = require('../../src/js/clockComponent');
   const clockElement = clockComponent.default();
 

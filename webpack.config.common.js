@@ -1,24 +1,24 @@
-const merge = require('webpack-merge');
-const webpack = require('webpack');
-const parts = require('./webpack.parts');
+import merge from 'webpack-merge';
+import webpack from 'webpack';
+import paths from './webpack.paths';
 
-const bootstrapEntryPoints = require('./webpack.bootstrap');
+import bootstrapEntryPoints from './webpack.bootstrap';
 
-// const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+// const FaviconsWebpackPlugin from 'favicons-webpack-plugin');
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 const commonConfig = merge([
   {
     // The entry point for the bundle. Entries have to resolve to files!
     // If a directory contains *index.js*, it resolves to that.
     entry: {
-      app: [bootstrapEntryPoints.dev, parts.paths.src],
+      app: [bootstrapEntryPoints.dev, paths.src],
       vendor: ['jquery', 'moment']
     },
     // Set of options instructing webpack on how and where it should output
     // the bundles, assets and anything else you bundle or load with webpack.
     output: {
-      path: parts.paths.dist,
+      path: paths.dist,
       filename: '[name].js'
     },
     // Use plugins to add functionality typically related to bundles in webpack.
@@ -56,7 +56,7 @@ const commonConfig = merge([
         // Connecting Babel with webpack through babel-loader
         {
           test: /\.js$/,
-          include: parts.paths.src,
+          include: paths.src,
           use: {
             loader: 'babel-loader',
             options: {
